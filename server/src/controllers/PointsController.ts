@@ -19,7 +19,15 @@ class PointsController {
 
         const serializedPoints = points.map(point => {
             return {
-                ...points,
+                id: point.id,
+                image: point.image,
+                name: point.name,
+                email: point.email,
+                whatsapp: point.whatsapp,
+                latitude: point.latitude,
+                longitude: point.longitude,
+                city: point.city,
+                uf: point.uf,
                 image_url: `http://192.168.0.200:3333/uploads/${point.image}`,
             };
         });
